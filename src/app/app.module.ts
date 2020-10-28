@@ -21,6 +21,7 @@ import { CreateBlogComponent } from './blog/create-blog/create-blog.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
 import { ListBlogsComponent } from './blog/list-blogs/list-blogs.component';
 import {EditorModule} from '@tinymce/tinymce-angular';
+import { ViewPostComponent } from './post/view-post/view-post.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {EditorModule} from '@tinymce/tinymce-angular';
     BlogSideBarComponent,
     CreateBlogComponent,
     CreatePostComponent,
-    ListBlogsComponent
+    ListBlogsComponent,
+    ViewPostComponent
   ],
   imports: [
     BrowserModule,
