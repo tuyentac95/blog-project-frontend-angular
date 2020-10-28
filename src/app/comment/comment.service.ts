@@ -16,4 +16,9 @@ export class CommentService {
     const header = new HttpHeaders().set('Authorization', 'Bearer ' + this.authService.getJwtToken());
     return this.httpClient.get<CommentPayload[]>('http://localhost:8080/api/comments/by-post/' + postId, {headers: header});
   }
+
+  postComment(commentPayload: CommentPayload): Observable<any> {
+    const header = new HttpHeaders().set('Authorization', 'Bearer ' + this.authService.getJwtToken());
+    return this.httpClient.post<any>('http://localhost:8080/api/comments/', commentPayload, {headers: header});
+  }
 }
