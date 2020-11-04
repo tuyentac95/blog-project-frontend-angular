@@ -13,12 +13,12 @@ export class BlogService {
               private authService: AuthService) { }
 
   getAllSubBlogs(): Observable<Array<SubBlogModel>> {
-    const header = new HttpHeaders().set('Authorization', 'Bearer ' + this.authService.getJwtToken());
-    return this.http.get<Array<SubBlogModel>>('http://localhost:8080/api/appblog', {headers: header});
+    // const header = new HttpHeaders().set('Authorization', 'Bearer ' + this.authService.getJwtToken());
+    return this.http.get<Array<SubBlogModel>>('http://localhost:8080/api/appblog');
   }
 
   createSubBlog(subBlogModel: SubBlogModel): Observable<SubBlogModel> {
-    const header = new HttpHeaders().set('Authorization', 'Bearer ' + this.authService.getJwtToken());
-    return this.http.post<SubBlogModel>('http://localhost:8080/api/appblog', subBlogModel, {headers: header});
+    // const header = new HttpHeaders().set('Authorization', 'Bearer ' + this.authService.getJwtToken());
+    return this.http.post<SubBlogModel>('http://localhost:8080/api/appblog', subBlogModel);
   }
 }
